@@ -11,21 +11,19 @@ This project just a simple boilerplate to use this tutorial.
 Just run:
 
 ```shell
+npm install
+
 npm start 
 ```
 
 Now open up `index.html` in your favorite browser and everything should be ready to use! 
 You should see a page that says “Hello from TypeScript and React!”
 
-## Usage
-
-When using it as a scaffold, shallow clone only the latest history.
-
-
-```
-git clone --depth 1 https://github.com/mitsuruog/dead-simple-react-typescript-starter.git
-```
 
 ## Licensing
 
 MIT
+
+### Original based off
+
+https://github.com/mitsuruog/dead-simple-react-typescript-starter

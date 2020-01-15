@@ -1,7 +1,7 @@
 {
-  "name": "dead-simple-react-typescript-starter",
+  "name": "simple-react-boilerplate",
   "version": "1.0.0",
-  "description": "A dead simple react typescript starter kit",
+  "description": "A simple react typescript starter kit",
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack && cp src/index.html dist/index.html",
@@ -10,9 +10,9 @@
     "lint:fix": "tslint 'src/**/*.ts{,x}' --fix"
   },
   "engines": {
-    "node": ">=v8.9.0"
+    "node": ">=v10.5.0"
   },
-  "author": "mitsuru.ogawa.jp@gmail.com",
+  "author": "ed@acutulus.co",
   "license": "MIT",
   "dependencies": {
     "@emotion/core": "^10.0.27",
