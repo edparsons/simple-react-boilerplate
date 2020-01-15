@@ -1,0 +1,99 @@
+{
+	"defaultSeverity": "error",
+	"extends": ["tslint:recommended", "tslint-sonarts", "tslint-eslint-rules", "tslint-defocus"],
+	"linterOptions": {
+		"exclude": ["node_modules", "dist"]
+	},
+	"jsRules": {},
+	"rules": {
+		"indent": [true, "spaces", 4],
+		"ter-indent": [
+			true,
+			4,
+			{
+				"SwitchCase": 1
+			}
+		],
+		"semicolon": [true, "always", "ignore-bound-class-methods"],
+		"quotemark": [true, "single", "avoid-escape"],
+		"trailing-comma": [
+			true,
+			{
+				"multiline": {
+					"objects": "always",
+					"arrays": "always",
+					"functions": "never",
+					"typeLiterals": "ignore"
+				},
+				"esSpecCompliant": true,
+				"singleline": "never"
+			}
+		],
+		"ordered-imports": [
+			true,
+			{
+				"import-sources-order": "any",
+				"grouped-imports": true
+			}
+		],
+		"object-literal-sort-keys": false,
+		"only-arrow-functions": false,
+		"adjacent-overload-signatures": true,
+		"curly": true,
+		"no-var-keyword": true,
+		"eofline": true,
+		"import-spacing": true,
+		"no-trailing-whitespace": [true, "ignore-template-strings"],
+		"linebreak-style": [true, "LF"],
+		"comment-format": [true, "check-space"],
+		"cyclomatic-complexity": [true, 20],
+		"max-file-line-count": [true, 1000],
+		"max-line-length": [true, 200],
+		"prefer-const": true,
+		"whitespace": true,
+		"object-literal-shorthand": false,
+		"no-extra-semi": false,
+		"no-invalid-regexp": true,
+		"ter-no-irregular-whitespace": [true],
+		"member-access": [true, "no-public"],
+		"max-classes-per-file": [true, 5, "exclude-class-expressions"],
+		"no-empty": false,
+		"object-literal-key-quotes": false,
+		"interface-name": false,
+		"interface-over-type-literal": false,
+		"no-consecutive-blank-lines": false,
+		"array-type": [true, "generic"],
+		"variable-name": [
+			true,
+			"check-format",
+			"allow-leading-underscore",
+			"allow-trailing-underscore",
+			"allow-pascal-case"
+		],
+		"member-ordering": false,
+		"space-before-function-paren": false,
+		"no-empty-interface": false,
+		"no-big-function": [true, 150],
+		"cognitive-complexity": [true, 16],
+		"mccabe-complexity": [true, 17],
+		"no-useless-cast": false,
+		"parameters-max-number": [true, 10],
+		"no-duplicate-string": [true, 7],
+		"no-empty-nested-blocks": true,
+		"no-inconsistent-return": false,
+		"no-nested-incdec": true,
+		"no-nested-template-literals": false,
+		"prefer-default-last": true,
+		"no-identical-functions": false,
+		"defocus": true,
+		"prefer-immediate-return": false,
+		"prefer-for-of": false, // TODO: Update simple for loops to for-of
+		"no-unused-variable": false,
+		"no-unused-expression": false, // TODO: Update unused expressions and variables
+		"noUnusedLocals": false,
+		"max-union-size": false,
+		"no-namespace": false,
+		"no-identical-expressions": false
+	},
+	"rulesDirectory": []
+}
