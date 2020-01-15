@@ -1,4 +1,4 @@
-# Dead simple react typescript starter kit
+# Simple react typescript emotion starter kit
 
 > Just for myself
 
