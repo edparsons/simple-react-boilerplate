@@ -1,28 +1,34 @@
 import * as React from 'react';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { Button } from '@material-ui/core';
 
-import styled from '../helpers/styled';
 export interface HelloProps {
     compiler: string;
     framework: string;
 }
 
-const Button = styled.button`
-  padding: 32px;
-  background-color: ${(props) => props.theme.colors.primary};
-  font-size: 24px;
-  border-radius: 4px;
-  color: black;
-  font-weight: bold;
-  &:hover {
-    color: white;
-  }
-`;
-export class Hello extends React.Component<HelloProps, {}> {
-    buttonClicked() {
-        window.alert('clicked');
-    }
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    button: {
+      padding: '32px',
+      backgroundColor: theme.palette.primary.main,
+      fontSize: '24px',
+      borderRadius: '4px',
+      color: 'black',
+      fontWeight: 'bold',
+      '&:hover': {
+        color: 'white'
+      }
+    },
+  })
+)
 
-    render() {
-        return <><h1>Hello from {this.props.compiler} and {this.props.framework}!</h1><Button onClick={this.buttonClicked}>Mah</Button></>;
-    }
+export const Hello:React.FunctionComponent<HelloProps> = (props) => {
+  const classes = useStyles();
+
+  const buttonClicked = () => {
+    window.alert('clicked');
+  }
+
+  return <><h1>Hello from {props.compiler} and {props.framework}!</h1><Button className={classes.button} onClick={buttonClicked}>Mah</Button></>;
 }
